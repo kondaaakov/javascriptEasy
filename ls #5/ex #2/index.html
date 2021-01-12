@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
+	      rel="stylesheet">
+
+	<title>Ex #2</title>
+</head>
+<body>
+
+<main class="main" id="app">
+	<form action="#" id="form" class="form">
+		<div class="form_up form_block">
+			<div class="block_unblock">
+				<label for="name" class="form_label">Введите ваше имя:</label>
+				<input type="text" class="form_input" id="name" placeholder="Ваше имя">
+				<p class="warn_mess" id="warn_name"></p>
+			</div>
+
+			<div class="block_unblock">
+				<label for="tel" class="form_label">Введите телефон:</label>
+				<input type="tel" class="form_input" id="tel" placeholder="Телефон">
+				<p class="warn_mess" id="warn_tel"></p>
+			</div>
+		</div>
+		<div class="form_middle form_block">
+			<div class="block_unblock">
+				<label for="pass" class="form_label">Придумайте пароль:</label>
+				<input type="password" class="form_input" id="pass" placeholder="Пароль">
+				<p class="warn_mess" id="warn_pass"></p>
+			</div>
+
+			<div class="block_unblock">
+				<label for="apass" class="form_label">Повторите пароль:</label>
+				<input type="password" class="form_input form_input_block" id="apass" placeholder="Повторите пароль">
+				<p class="warn_mess" id="warn_apass"></p>
+			</div>
+		</div>
+		<div class="form_bottom form_block">
+			<button class="btn" id="button">Готово!</button>
+			<p id="all_good" class="all_good"></p>
+		</div>
+	</form>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
