@@ -1,0 +1,91 @@
+<meta charset="UTF-8">
+<script>
+	// ЗАДАНИЕ №1
+    let a = 1, b = 1, c, d;
+    c = ++a;
+    console.log(c); // 2. При применении результата в данный момент префиксная форма возвращает новое значение.
+
+    d = b++;
+    console.log(d); // 1. При использовании результата сейчас постфиксная форма инкремента возвращает старое значение.
+
+    c = 2 + ++a;
+    console.log(c); // 5. Тут a будет 3, так как до этого у а было 2.
+
+    d = 2 + b++;
+    console.log(d); // 4. 2+2 = 4
+    console.log(a); // 3. До этого выполнялись действия с а, где оно увеличивалось на 1.
+    console.log(b); // 3. Также и тут.
+
+	// ЗАДАНИЕ №2
+    let a = 2;
+    console.log(a); //Отображает 2.
+    let x = 1 + (a *= 2);
+    console.log(x); // Отображает 5, так как 2*2=4 и 4+1 = 5
+    console.log(a); // Отображает 4, так как используется метод умножения с присваиванием *=.
+
+	// ЗАДАНИЕ №3
+    let num1 = 2;
+    let num2 = 15;
+
+    if (num1 >= 0 && num2 >= 0) {
+        console.log(num1 - num2)
+    } else if (num1 < 0 && num2 < 0) {
+        console.log(num1 * num2)
+    } else {
+        console.log(num1 + num2)
+    }
+
+    // ЗАДАНИЕ №4
+    function sum (a, b) {
+        return a + b;
+    }
+    function sub (a, b) {
+        return a - b;
+    }
+    function multi (a, b) {
+        return a * b;
+    }
+    function dif (a, b) {
+        return a / b;
+    }
+    console.log(sum(15, 5));
+    console.log(sub(15,5));
+    console.log(multi(15,5));
+    console.log(dif(15,5));
+
+    // ЗАДАНИЕ №5
+    function mathOperation(arg1, arg2, operation) {
+        switch(operation) {
+            case 'sum':
+                return console.log(`Сложение: ${arg1 + arg2}`);
+            case 'sub':
+                return console.log(`Вычитание: ${arg1 - arg2}`);
+            case 'multi':
+                return console.log(`Умножение: ${arg1 * arg2}`);
+            case 'dif':
+                return console.log(`Деление: ${arg1 / arg2}`);
+            default:
+                return console.log('Такой операции нет!')
+        }
+    }
+    mathOperation(30, 5, 'sum')
+    mathOperation(30, 5, 'sub')
+    mathOperation(30, 5, 'multi')
+    mathOperation(30, 5, 'dif')
+    mathOperation(30, 5, 'summmm')
+
+	// ЗАДАНИЕ №6
+    function bankOperation () {
+        let numberBank = +prompt('Введите сумму, которую хотите положить на счёт.')
+        if (numberBank % 10 === 0) {
+            return console.log(`Сумма в ${numberBank} рублей успешна зачислена на счёт`);
+        } else if (numberBank % 10 === 1) {
+            return console.log(`Сумма в ${numberBank} рубль успешна зачислена на счёт`);
+        } else if (numberBank % 10 > 1 && numberBank % 10 < 5) {
+            return console.log(`Сумма в ${numberBank} рубля успешна зачислена на счёт`);
+        } else {
+            return console.log(`Сумма в ${numberBank} рублей успешна зачислена на счёт`);
+        }
+    }
+    bankOperation();
+</script>
